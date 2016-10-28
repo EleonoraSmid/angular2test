@@ -1,0 +1,14 @@
+<h2>{{title}}</h2>
+<ul class="todoList">
+	<li *ngFor="let todo of todos" 
+	[class.selected]="todo===selectTodo"
+	(click)="selectedTodo(todo)" >
+		<div>{{todo.title}}</div>
+	</li>
+</ul>
+<button class="todoButton">Add Todo</button>
+
+<div *ngIf="selectTodo" class="TodoContent">
+	{{selectTodo.content}}
+	<button class="todoButton" (click)="gotoTodo(todo)">Edit</button><button class="todoButton">Delete</button>
+</div>

@@ -1,0 +1,7 @@
+<div *ngIf="todo">
+	{{todo.id}}
+	<input type="text" name="" value="{{todo.title}}" >
+	<input  name="content" [(ngModel)]="todo.content">
+	<button>Update</button><button>Delete</button>
+	<button (click)="goBack()">Go Back</button>
+</div>

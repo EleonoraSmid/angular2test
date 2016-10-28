@@ -1,0 +1,17 @@
+<h3>Top Heroes</h3>
+<div class="grid grid-pad">
+  <div *ngFor="let hero of heroes" (click)="gotoDetail(hero)" class="col-1-4">
+    <div class="module hero">
+      <h4>{{hero.name}}</h4>
+    </div>
+  </div>
+</div>
+
+<h3>Top Todos</h3>
+<div>
+	<div *ngFor="let todo of todos" class="col-1-4" (click)="gotoTodo(todo)">
+		<div class="module todo">
+			{{todo.title}}
+		</div>
+	</div>
+</div>
